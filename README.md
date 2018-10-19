@@ -7,6 +7,11 @@
 * [ ![Download](https://api.bintray.com/packages/lubin/LubinBottomTabBar/InputBoxLayout/images/download.svg) ](https://bintray.com/lubin/LubinBottomTabBar/InputBoxLayout/_latestVersion)
 ![](https://img.shields.io/badge/author-Lubin-red.svg)
 
+### 使用
+
+```java
+compile 'com.lubin.widget:inputboxlayout:0.5.1'
+```
 ### xml中使用
 ```xml
     <com.lubin.widget.InputBoxLayout
