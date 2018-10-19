@@ -10,7 +10,7 @@
 ### 使用
 
 ```java
-compile 'com.lubin.widget:inputboxlayout:0.5.1'
+compile 'com.lubin.widget:inputboxlayout:0.5.2'
 ```
 ### xml中使用
 ```xml
