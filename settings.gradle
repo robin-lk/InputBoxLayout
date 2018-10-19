@@ -1,1 +1,1 @@
-include ':app', ':InputBoxLayout'
+include ':app', ':inputboxlayout'
