@@ -11,7 +11,7 @@
         <attr name="box_margin" format="dimension" />
         <attr name="box_marginRight" format="dimension" />
         <attr name="box_marginLeft" format="dimension" />
-        <attr name="box_background" format="reference" />
+        <attr name="box_drawable" format="integer" />
         <attr name="box_textCoclor" format="color"/>
     </declare-styleable>
 </resources>

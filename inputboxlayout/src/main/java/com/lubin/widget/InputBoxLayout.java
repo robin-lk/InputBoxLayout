@@ -2,7 +2,6 @@ package com.lubin.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
@@ -41,7 +40,7 @@ public class InputBoxLayout extends LinearLayout implements TextWatcher, View.On
     private int boxPosition = 0;
     private int boxTextColor;
     private String boxInputType;
-    private Drawable boxBackground = null;
+    private int boxBackground;
 
     private List<EditText> editTexts;
     private OnBoxListener onBoxListener;
@@ -63,7 +62,7 @@ public class InputBoxLayout extends LinearLayout implements TextWatcher, View.On
     private void initBoxView(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.InputBoxLayout);
         boxAccount = typedArray.getInt(R.styleable.InputBoxLayout_box_account, boxAccount);
-        boxBackground = typedArray.getDrawable(R.styleable.InputBoxLayout_box_background);
+        boxBackground = typedArray.getResourceId(R.styleable.InputBoxLayout_box_drawable, R.drawable.bg_box_default_frame);
         boxWidth = (int) typedArray.getDimension(R.styleable.InputBoxLayout_box_width, boxWidth);
         boxHeight = (int) typedArray.getDimension(R.styleable.InputBoxLayout_box_height, boxHeight);
         boxTextSize = (int) typedArray.getDimension(R.styleable.InputBoxLayout_box_textSize, boxTextSize);
@@ -103,11 +102,9 @@ public class InputBoxLayout extends LinearLayout implements TextWatcher, View.On
             editText.setId(i);
             editText.setEms(1);
             editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
-            if (boxBackground != null) {
-                editText.setBackground(boxBackground);
-            } else {
-                editText.setBackgroundResource(R.drawable.bg_box_default_frame);
-            }
+
+            editText.setBackground(getResources().getDrawable(boxBackground));
+
             switch (boxInputType) {
                 case INPUT_TYPE_NUMBER:
                     editText.setInputType(InputType.TYPE_CLASS_NUMBER);

@@ -12,6 +12,7 @@
         app:box_height="40dp"
         app:box_account="4"
         app:box_margin="4dp"
+        app:box_drawable="@drawable/bg_box_default_frame_2"
         android:layout_height="wrap_content">
 
     </com.lubin.widget.InputBoxLayout>

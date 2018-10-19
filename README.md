@@ -24,7 +24,7 @@ compile 'com.lubin.widget:inputboxlayout:0.5.1'
         app:box_margin="4dp"
         app:box_inputType="number"
         app:box_textCoclor="#000"
-        app:box_background="@drawable/ic_launcher_background"
+        app:box_drawable="@drawable/bg_box_default_frame"
         app:box_textSize="12sp"
         android:layout_height="wrap_content"/>
 ```
@@ -49,12 +49,12 @@ compile 'com.lubin.widget:inputboxlayout:0.5.1'
         app:box_textCoclor="#000"
         
         //输入框的背景
-        app:box_background="@drawable/ic_launcher_background"
+        app:box_background="@drawable/bg_box_default_frame"
         
         //文字大小
         app:box_textSize="12sp"
 ```
-* ic_launcher_background.xml
+* bg_box_default_frame
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
